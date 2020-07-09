@@ -76,7 +76,7 @@ class Main extends Component {
 </table>
 </div>
 <div className="choose-candidate">
-  {!this.props.voted?
+  
   <form onSubmit={this.handleSubmit}>
   <div className="form-group">
     <label htmlFor="exampleFormControlSelect1">Example select</label>
@@ -88,7 +88,7 @@ class Main extends Component {
   <button type="submit" className="btn btn-secondary btn-back">Vote</button>
 </div>
 </form>
-  : null}
+ 
   
   
 

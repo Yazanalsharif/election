@@ -62,9 +62,9 @@ class App extends Component {
     this.setState({candidate:candid});
   }
   voteToYourCandidate = async (votersId) => {
-   const voted =  await this.electionInstance.methods.voteToCandidate(votersId).send({from:this.accounts[0]}).on("error",(error) => {
+   await this.electionInstance.methods.voteToCandidate(votersId).send({from:this.accounts[0]}).on("error",(error) => {
      console.log("the error is ");
-     console.log(error.message);
+     console.log(error);
    })
    this.setState({hasVoted:true});
   }
