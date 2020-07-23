@@ -76,24 +76,29 @@ class Main extends Component {
 </table>
 </div>
 <div className="choose-candidate">
-  
-  <form onSubmit={this.handleSubmit}>
-  <div className="form-group">
-    <label htmlFor="exampleFormControlSelect1">Example select</label>
-    <select className="form-control width" ref={(input) => this.candidateId = input} id="exampleFormControlSelect1">
-     {this.gitSelectCandidate()}
-    </select>
+  {!this.props.voted? 
+    <form onSubmit={this.handleSubmit}>
+    <div className="form-group">
+      <label htmlFor="exampleFormControlSelect1">Example select</label>
+      <select className="form-control width" ref={(input) => this.candidateId = input} id="exampleFormControlSelect1">
+       {this.gitSelectCandidate()}
+      </select>
+    </div>
+    <div className="btn-group" role="group" aria-label="Basic example">
+    <button type="submit" className="btn btn-secondary btn-back">Vote</button>
   </div>
-  <div className="btn-group" role="group" aria-label="Basic example">
-  <button type="submit" className="btn btn-secondary btn-back">Vote</button>
-</div>
-</form>
+  </form>
+  : <p></p>}
+
  
   
   
 
 </div>
-        <p className="Address"><span className="span-address">your Address:</span> {this.props.address}</p>
+{ this.props.address ?
+        <p className="Address"><span className="span-address">your Address:</span> {this.props.address}</p> 
+        : <p>undifined</p>
+      }
 </div>
         )
     }
