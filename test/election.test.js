@@ -50,7 +50,7 @@ contract("test election contract", async (accounts) => {
        const candidate = await instance.candidates(0);
        expect(candidate.votersNum).to.be.bignumber.equal(new BN(1));
        expect(await instance.getNumOfVoters()).to.be.bignumber.equal(new BN(1));
-       expect(await instance.voters(voter1)).to.be.false;
+       expect(await instance.voters(voter1)).to.be.true;
    });
 
    //test voting function
