@@ -7,3 +7,6 @@ truffle migrate to deploy smart contract
 
 
 on client folder npm start
+
+
+## i will update this project and develop it soooon 
