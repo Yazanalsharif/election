@@ -36,7 +36,7 @@ class App extends Component {
         electionContract.abi,
         electionContract.networks[this.networkId] && electionContract.networks[this.networkId].address
       );
-
+      this.changeAccountHandle();
       this.ubdateTheMsgSender();
       this.listenToVoters();
       this.getTheCandidateData();
@@ -68,6 +68,12 @@ class App extends Component {
    });
    
    this.setState({hasVoted:true});
+  }
+  //when change the account will do this function 
+  changeAccountHandle = async () => {
+      await window.ethereum.on("accountsChanged", async account => {
+      this.setState({address:account});
+    });
   }
   
   listenToVoters = async () => {

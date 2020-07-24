@@ -18,4 +18,4 @@ module.exports = {
     }
   }
 };
-//web3.eth.sendTransaction({from:"0x84F084c2eD669276F43dBD13110A71e5E3aC3241", to:"0x3d5eA0305dc7ed9F8557C85B64aB63A181F1f9cA", value:web3.utils.toWei(1, "ether")});
+//web3.eth.sendTransaction({from:"0x9A8a5A59f648a927896a0892C428278Ca6B3F65e", to:"0x3d5eA0305dc7ed9F8557C85B64aB63A181F1f9cA", value:web3.utils.toWei("1", "ether")});
