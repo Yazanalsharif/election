@@ -1,5 +1,5 @@
 # election
-election on the ethererum blockChain developer
+election on the ethererum blockChain Network
 
 npm install on root and client folder 
 
